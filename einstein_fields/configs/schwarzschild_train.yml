@@ -1,6 +1,6 @@
 # Simple training config for Schwarzschild metric
 
-log_dir: 'C:/Users/zwimp/EinFields/runs'
+log_dir: '/workspaces/EinFields/runs'
 run_dir: ''
 
 checkpoint:
@@ -8,7 +8,7 @@ checkpoint:
   reset_optimizer: false
 
 data:
-  data_dir: 'C:/Users/zwimp/EinFields/data/schwarzschild/spherical/no_scale'
+  data_dir: '/workspaces/EinFields/data/schwarzschild/spherical/no_scale'
   losses:
     jacobian: true
     hessian: false

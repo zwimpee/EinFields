@@ -1,0 +1,44 @@
+# Simple training config for Schwarzschild metric
+
+log_dir: 'C:/Users/zwimp/EinFields/runs'
+run_dir: ''
+
+checkpoint:
+  load_dir: ''
+  reset_optimizer: false
+
+data:
+  data_dir: 'C:/Users/zwimp/EinFields/data/schwarzschild/spherical/no_scale'
+  losses:
+    jacobian: true
+    hessian: false
+
+architecture:
+  model_name: MLP
+  hidden_dim: 64
+  output_dim: 10
+  num_layers: 4
+  activation: silu
+  extra_model_args: {}
+
+optimizer:
+  name: adam
+  learning_rate: 0.001
+  lr_scheduler: cosine_decay
+  extra_optimizer_args:
+    b1: 0.9
+    b2: 0.999
+    eps: 1.0e-08
+  extra_scheduler_args:
+    decay_steps: 5000
+    alpha: 1.0e-5
+    exponent: 1.0
+
+training:
+  epochs: 50
+  num_batches: 50
+  rng_seed: 42
+  gradient_conflict: null
+  norm: mse
+  integration: false
+  metric_type: distortion_sym

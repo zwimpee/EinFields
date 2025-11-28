@@ -28,4 +28,4 @@ store_quantities:
   store_GR_tensors: false
 compute_volume_element: false
 problem: 'schwarzschild'
-data_dir: '...'
+data_dir: 'C:/Users/zwimp/EinFields/data'

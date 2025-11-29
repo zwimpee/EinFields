@@ -11,7 +11,7 @@ data:
   data_dir: '/workspaces/EinFields/data/schwarzschild/spherical/no_scale'
   losses:
     jacobian: true
-    hessian: false
+    hessian: true
 
 architecture:
   model_name: MLP
